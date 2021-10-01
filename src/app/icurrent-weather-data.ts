@@ -7,7 +7,7 @@ export interface ICurrentWeatherData {
   main: {
     temp: number
   },
-  weather [
+  weather: [
     {
       description: string,
       icon: string
