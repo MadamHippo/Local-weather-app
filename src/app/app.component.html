@@ -2,10 +2,10 @@
   <mat-toolbar color="primary">Local Weather</mat-toolbar>
   <div>Your city, your forecast, right now!</div>
   <div>
-    <app-city-search></app-city-search>
+    <app-city-search (searchEvent)="doSearch($event)"></app-city-search> <!-- This is an event binding!! App component is now officially subscribed to the Search event. This text box is the step after the search box check validity inside city-search. Now it will be passed to this doSearch event. This is where to will write the doSearch function that will call with what the user has typed. We do it in the app-component because app component is considered the parent of the app. Now let's check out app component TS file and write our doSearch function, wee!! :)-->
   </div>
   <h2>Current Weather</h2>
   <mat-card color="primary">
-    <app-current-weather></app-current-weather>
+    <app-current-weather [current]="currentWeather"></app-current-weather>
   </mat-card>
 </div>
